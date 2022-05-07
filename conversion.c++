@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-int x;
-void intro()
+int x;   // It is a global variable it uses across all funtion.
+void intro()   
 {
 	cout << "Enter [1] for Binary,[2] for Hexadecimal,[3] for Octal." << "\n";
 
@@ -24,11 +24,13 @@ void binary(int a)
 void hexa(int b)
 {
 	cout << "The Hexadecimal number is = " << hex << b << "\n";
+	// [hex] is an inbuilt function which convert decimal number (base 10) to hexadecimal (base 16).
 
 }
 void octal(int b)
 {
 	cout << "The Ocatal number is = " << oct << b << "\n";
+	// [oct] is an inbuilt function which convert decimal number (base 10) to octal number(base 8).
 }
 void let()
 {	
@@ -46,6 +48,8 @@ void let()
 		cout << "Please choose a valid number." << "\n";
 		let();
 	}
+	// in this function we call every funtion through if else condition.
+	// aslo called the the funtion itself when the conditions is not satisfied.
 }
 int main()
 {
